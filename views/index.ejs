@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Node.js Simple File Upload</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css">
+    <style>
+        body
+        {
+            background-image: url("https://images.unsplash.com/photo-1513530534585-c7b1394c6d51?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8b2ZmaWNlJTIwZGVza3xlbnwwfHwwfHw%3D&ixlib=rb-1.2.1&w=1000&q=80");
+            background-repeat: no-repeat;
+            background-size: 95rem 45rem;
+        }
+        #uploadForm{
+            padding-top: 20px;
+            display: flex;
+            justify-content: space-between;
+        }
+        #all
+        {
+            margin: 200px 50px 200px 200px;
+        }
+        h1
+        {
+            color: blue;
+        }
+        .container
+        {
+            margin-top: 30px;
+        }
+        input.btn{
+            flex: 0.8;
+        }
+        button.btn{
+            flex: 0.15;
+        }
+    </style>
+</head>
+<body>
+    <div id="all">
+        <h1>FinancePeer Assignment</h1>
+        <h4>Name: Abhinav</h4>
+        <h4>Reg No.: 18BCE0641</h4>
+        <div class="container">
+            <form action="/upload" method="post" enctype="multipart/form-data">
+                <input type="file" name="files"
+                class="btn btn-primary" id="file"
+                multiple>
+                <button class="btn btn-primary" type="submit" style="border-radius: 4px;">
+                    Upload
+                </button>
+            </form>
+        </div>
+    </div>
+    <script type="text/javascript">
+        document.getElementById("file").value = "";
+    </script>
+</body>
+</html>
